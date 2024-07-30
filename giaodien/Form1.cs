@@ -25,5 +25,46 @@ namespace giaodien
         {
 
         }
+
+        private void motionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void veevfootToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void allFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit?",
+                "Thong Bao!", 
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question
+                );
+            if(result == DialogResult.Yes)
+            
+                Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
