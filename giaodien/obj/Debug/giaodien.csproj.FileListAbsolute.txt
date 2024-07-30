@@ -1,0 +1,10 @@
+D:\giaodien\bin\Debug\giaodien.exe.config
+D:\giaodien\bin\Debug\giaodien.exe
+D:\giaodien\bin\Debug\giaodien.pdb
+D:\giaodien\obj\Debug\giaodien.csproj.AssemblyReference.cache
+D:\giaodien\obj\Debug\giaodien.Form1.resources
+D:\giaodien\obj\Debug\giaodien.Properties.Resources.resources
+D:\giaodien\obj\Debug\giaodien.csproj.GenerateResource.cache
+D:\giaodien\obj\Debug\giaodien.csproj.CoreCompileInputs.cache
+D:\giaodien\obj\Debug\giaodien.exe
+D:\giaodien\obj\Debug\giaodien.pdb
