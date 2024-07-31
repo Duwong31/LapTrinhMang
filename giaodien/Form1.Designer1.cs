@@ -42,21 +42,20 @@
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.container = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnAddFile = new System.Windows.Forms.Button();
+            this.btnOpenFoder = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viewAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sharedFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yourFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharedFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,7 +66,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -98,9 +96,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.menuStrip2);
-            this.panel2.Location = new System.Drawing.Point(104, 387);
+            this.panel2.Location = new System.Drawing.Point(104, 370);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 454);
+            this.panel2.Size = new System.Drawing.Size(222, 454);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -113,7 +111,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip2.Size = new System.Drawing.Size(193, 49);
+            this.menuStrip2.Size = new System.Drawing.Size(222, 49);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -213,45 +211,34 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.container);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.btnAddFile);
+            this.panel3.Controls.Add(this.btnOpenFoder);
             this.panel3.Location = new System.Drawing.Point(15, 118);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(857, 256);
             this.panel3.TabIndex = 7;
             // 
-            // label2
+            // button1
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(309, 113);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.label2.Size = new System.Drawing.Size(235, 44);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Drop the file here";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // container
-            // 
-            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.container.Image = ((System.Drawing.Image)(resources.GetObject("container.Image")));
-            this.container.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.container.Location = new System.Drawing.Point(5, 16);
-            this.container.Name = "container";
-            this.container.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.container.Size = new System.Drawing.Size(845, 154);
-            this.container.TabIndex = 4;
-            this.container.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(5, 16);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.button1.Size = new System.Drawing.Size(845, 154);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(230, 199);
+            this.btnClear.Location = new System.Drawing.Point(234, 199);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(114, 50);
             this.btnClear.TabIndex = 3;
@@ -270,27 +257,25 @@
             this.button2.Text = "Start";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // btnAddFile
+            // btnOpenFoder
             // 
-            this.btnAddFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFile.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFile.Image")));
-            this.btnAddFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddFile.Location = new System.Drawing.Point(28, 199);
-            this.btnAddFile.Name = "btnAddFile";
-            this.btnAddFile.Size = new System.Drawing.Size(147, 50);
-            this.btnAddFile.TabIndex = 1;
-            this.btnAddFile.Text = "Add File";
-            this.btnAddFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddFile.UseVisualStyleBackColor = true;
-            this.btnAddFile.Click += new System.EventHandler(this.btnAddFile_Click);
-            // 
+            this.btnOpenFoder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenFoder.Image = ((System.Drawing.Image)(resources.GetObject("btnOpenFoder.Image")));
+            this.btnOpenFoder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpenFoder.Location = new System.Drawing.Point(28, 199);
+            this.btnOpenFoder.Name = "btnOpenFoder";
+            this.btnOpenFoder.Size = new System.Drawing.Size(152, 50);
+            this.btnOpenFoder.TabIndex = 1;
+            this.btnOpenFoder.Text = "Add File";
+            this.btnOpenFoder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpenFoder.UseVisualStyleBackColor = true;
             // btnX
             // 
             this.btnX.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnX.BackgroundImage")));
             this.btnX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnX.Location = new System.Drawing.Point(831, 0);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(53, 38);
+            this.btnX.Size = new System.Drawing.Size(53, 39);
             this.btnX.TabIndex = 6;
             this.btnX.UseVisualStyleBackColor = true;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -349,19 +334,19 @@
             this.viewAllToolStripMenuItem.Size = new System.Drawing.Size(104, 32);
             this.viewAllToolStripMenuItem.Text = "View All";
             // 
-            // sharedFilesToolStripMenuItem
-            // 
-            this.sharedFilesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sharedFilesToolStripMenuItem.Name = "sharedFilesToolStripMenuItem";
-            this.sharedFilesToolStripMenuItem.Size = new System.Drawing.Size(143, 32);
-            this.sharedFilesToolStripMenuItem.Text = "Shared files ";
-            // 
             // yourFilesToolStripMenuItem
             // 
             this.yourFilesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourFilesToolStripMenuItem.Name = "yourFilesToolStripMenuItem";
             this.yourFilesToolStripMenuItem.Size = new System.Drawing.Size(114, 32);
             this.yourFilesToolStripMenuItem.Text = "Your files";
+            // 
+            // sharedFilesToolStripMenuItem
+            // 
+            this.sharedFilesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sharedFilesToolStripMenuItem.Name = "sharedFilesToolStripMenuItem";
+            this.sharedFilesToolStripMenuItem.Size = new System.Drawing.Size(143, 32);
+            this.sharedFilesToolStripMenuItem.Text = "Shared files ";
             // 
             // label1
             // 
@@ -375,10 +360,17 @@
             this.label1.Text = "Iconly";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fileSystemWatcher1
+            // label2
             // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(309, 113);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.label2.Size = new System.Drawing.Size(235, 44);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Drop the file here";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -406,7 +398,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,12 +426,11 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAddFile;
+        private System.Windows.Forms.Button btnOpenFoder;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button container;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 

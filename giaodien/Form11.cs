@@ -72,7 +72,7 @@ namespace giaodien
 
         }
 
-        private void container_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -88,10 +88,6 @@ namespace giaodien
         }
 
         private void btnClear_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAddFile_Click(object sender, EventArgs e)
         {
 
         }

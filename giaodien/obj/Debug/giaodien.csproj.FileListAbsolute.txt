@@ -18,3 +18,4 @@ D:\New folder\giaodien\obj\Debug\giaodien.csproj.GenerateResource.cache
 D:\New folder\giaodien\obj\Debug\giaodien.csproj.CoreCompileInputs.cache
 D:\New folder\giaodien\obj\Debug\giaodien.exe
 D:\New folder\giaodien\obj\Debug\giaodien.pdb
+D:\New folder\giaodien\obj\Debug\giaodien.Form2.resources
