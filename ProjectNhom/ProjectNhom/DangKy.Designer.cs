@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+           #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -48,6 +48,7 @@
             textBox_Matkhau.Location = new Point(273, 315);
             textBox_Matkhau.Multiline = true;
             textBox_Matkhau.Name = "textBox_Matkhau";
+            textBox_Matkhau.PasswordChar = '*';
             textBox_Matkhau.Size = new Size(271, 40);
             textBox_Matkhau.TabIndex = 5;
             // 
@@ -68,9 +69,9 @@
             label1.ForeColor = SystemColors.Highlight;
             label1.Location = new Point(86, 315);
             label1.Name = "label1";
-            label1.Size = new Size(98, 25);
+            label1.Size = new Size(97, 25);
             label1.TabIndex = 6;
-            label1.Text = "Mật khẩu:";
+            label1.Text = "Password:";
             // 
             // label2
             // 
@@ -79,9 +80,9 @@
             label2.ForeColor = SystemColors.Highlight;
             label2.Location = new Point(86, 269);
             label2.Name = "label2";
-            label2.Size = new Size(132, 25);
+            label2.Size = new Size(102, 25);
             label2.TabIndex = 8;
-            label2.Text = "Tên tài khoản:";
+            label2.Text = "Username:";
             // 
             // textBox_Tentaikhoan
             // 
@@ -100,9 +101,9 @@
             label3.ForeColor = SystemColors.Highlight;
             label3.Location = new Point(86, 361);
             label3.Name = "label3";
-            label3.Size = new Size(181, 25);
+            label3.Size = new Size(170, 25);
             label3.TabIndex = 10;
-            label3.Text = "Xác nhận mật khẩu:";
+            label3.Text = "Confirm password:";
             // 
             // textBox_Xacnhanmatkhau
             // 
@@ -110,6 +111,7 @@
             textBox_Xacnhanmatkhau.Location = new Point(273, 361);
             textBox_Xacnhanmatkhau.Multiline = true;
             textBox_Xacnhanmatkhau.Name = "textBox_Xacnhanmatkhau";
+            textBox_Xacnhanmatkhau.PasswordChar = '*';
             textBox_Xacnhanmatkhau.Size = new Size(271, 40);
             textBox_Xacnhanmatkhau.TabIndex = 9;
             // 
@@ -141,7 +143,7 @@
             button_DangKy.Name = "button_DangKy";
             button_DangKy.Size = new Size(215, 51);
             button_DangKy.TabIndex = 13;
-            button_DangKy.Text = "Đăng ký";
+            button_DangKy.Text = "Sign up";
             button_DangKy.UseVisualStyleBackColor = false;
             button_DangKy.Click += button_DangKy_Click;
             // 
@@ -162,7 +164,7 @@
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DangKy";
-            Text = "Đăng ký tài khoản";
+            Text = "Create new account";
             Load += DangKi_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

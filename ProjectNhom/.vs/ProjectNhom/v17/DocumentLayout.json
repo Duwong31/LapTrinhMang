@@ -1,45 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\",
+  "WorkspaceRootPath": "A:\\ProjectNhom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DELL_SOURCE_REPOS_PROJECTNHOM_PROJECTNHOM_DATABASE1.MDF/True/SqlTable/dbo.TaiKhoan.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|a:\\projectnhom\\projectnhom\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|a:\\projectnhom\\projectnhom\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|C:\\Users\\DELL\\source\\repos\\ProjectNhom\\projectnhom\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|C:\\Users\\DELL\\source\\repos\\ProjectNhom\\projectnhom\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|C:\\Users\\DELL\\source\\repos\\ProjectNhom\\projectnhom\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|c:\\users\\dell\\source\\repos\\projectnhom\\projectnhom\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF634197-70AB-4E62-8733-9035B48570BC}|ProjectNhom\\ProjectNhom.csproj|solutionrelative:projectnhom\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\Home\\Home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,127 +25,38 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DangNhap.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangNhap.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\DangNhap.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangNhap.cs",
-              "RelativeToolTip": "ProjectNhom\\DangNhap.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA7wBIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:00:06.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DangKy.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangKy.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\DangKy.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangKy.cs [Design]",
-              "RelativeToolTip": "ProjectNhom\\DangKy.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:02:19.603Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.TaiKhoan [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DELL_SOURCE_REPOS_PROJECTNHOM_PROJECTNHOM_DATABASE1.MDF/True/SqlTable/dbo.TaiKhoan.sql",
-              "ToolTip": "dbo.TaiKhoan [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-07-31T03:12:56.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "QuenMatKhau.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\QuenMatKhau.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\QuenMatKhau.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\QuenMatKhau.cs [Design]",
-              "RelativeToolTip": "ProjectNhom\\QuenMatKhau.cs [Design]",
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Home\\Home.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Home\\Home.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T13:40:09.2Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-02T14:48:33.455Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QuenMatKhau.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\QuenMatKhau.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\QuenMatKhau.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\QuenMatKhau.cs",
-              "RelativeToolTip": "ProjectNhom\\QuenMatKhau.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAA8wAkAAAAAAAAA",
+              "Title": "Home.cs",
+              "DocumentMoniker": "A:\\ProjectNhom\\ProjectNhom\\Home.cs",
+              "RelativeDocumentMoniker": "ProjectNhom\\Home.cs",
+              "ToolTip": "A:\\ProjectNhom\\ProjectNhom\\Home.cs",
+              "RelativeToolTip": "ProjectNhom\\Home.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAIA0wDMAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T03:48:22.1Z",
+              "WhenOpened": "2024-08-02T13:56:28.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DangNhap.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangNhap.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\DangNhap.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangNhap.cs [Design]",
-              "RelativeToolTip": "ProjectNhom\\DangNhap.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "A:\\ProjectNhom\\ProjectNhom\\Home.cs",
+              "RelativeDocumentMoniker": "ProjectNhom\\Home.cs",
+              "ToolTip": "A:\\ProjectNhom\\ProjectNhom\\Home.cs [Design]",
+              "RelativeToolTip": "ProjectNhom\\Home.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T14:04:04.301Z",
+              "WhenOpened": "2024-08-01T15:05:16.754Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DangKy.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangKy.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\DangKy.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\DangKy.cs",
-              "RelativeToolTip": "ProjectNhom\\DangKy.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAkwEsAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T02:53:43.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Modify.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\Modify.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\Modify.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\Modify.cs",
-              "RelativeToolTip": "ProjectNhom\\Modify.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAmwAsAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T15:53:08.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\Connection.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\Connection.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\Connection.cs",
-              "RelativeToolTip": "ProjectNhom\\Connection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T15:53:08.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TaiKhoan.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\TaiKhoan.cs",
-              "RelativeDocumentMoniker": "ProjectNhom\\TaiKhoan.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\TaiKhoan.cs",
-              "RelativeToolTip": "ProjectNhom\\TaiKhoan.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T15:53:07.431Z",
-              "EditorCaption": ""
             }
           ]
         }

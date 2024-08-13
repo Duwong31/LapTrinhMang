@@ -9,7 +9,7 @@ namespace ProjectNhom
 {
     internal class Connection
     {
-        private static string SqlConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\source\repos\ProjectNhom\ProjectNhom\Database1.mdf;Integrated Security=True";
+        private static string SqlConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\Documents\LapTrinhMang\ProjectNhom\ProjectNhom\Database1.mdf;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(SqlConnectionString);

@@ -42,11 +42,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Highlight;
-            label2.Location = new Point(85, 285);
+            label2.Location = new Point(137, 285);
             label2.Name = "label2";
-            label2.Size = new Size(136, 25);
+            label2.Size = new Size(63, 25);
             label2.TabIndex = 11;
-            label2.Text = "Email đăng ký:";
+            label2.Text = "Email:";
             label2.Click += label2_Click;
             // 
             // textBox_emaildangky
@@ -73,11 +73,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Highlight;
-            label1.Location = new Point(94, 370);
+            label1.Location = new Point(137, 366);
             label1.Name = "label1";
-            label1.Size = new Size(83, 25);
+            label1.Size = new Size(70, 25);
             label1.TabIndex = 12;
-            label1.Text = "Kết quả:";
+            label1.Text = "Status:";
             // 
             // button_Laymatkhau
             // 
@@ -103,7 +103,8 @@
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "QuenMatKhau";
-            Text = "Quên Mật Khẩu";
+            Text = "Forgot password";
+            Load += QuenMatKhau_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

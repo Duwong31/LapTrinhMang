@@ -37,10 +37,10 @@
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Giao diện chính
-                    /*this.Hide();
+                    this.Hide();
                     Home home = new Home();
                     home.ShowDialog();
-                    this.Close();*/
+                    this.Close();
                 }
                 else
                 {

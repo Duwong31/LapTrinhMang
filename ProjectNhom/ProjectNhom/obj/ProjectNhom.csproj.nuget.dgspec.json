@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj": {}
+    "A:\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj": {
+    "A:\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj",
+        "projectUniqueName": "A:\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj",
         "projectName": "ProjectNhom",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\ProjectNhom\\ProjectNhom\\obj\\",
+        "projectPath": "A:\\ProjectNhom\\ProjectNhom\\ProjectNhom.csproj",
+        "packagesPath": "C:\\Users\\T-An\\.nuget\\packages\\",
+        "outputPath": "A:\\ProjectNhom\\ProjectNhom\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\T-An\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

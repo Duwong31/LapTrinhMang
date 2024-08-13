@@ -45,5 +45,10 @@ namespace ProjectNhom
         {
 
         }
+
+        private void QuenMatKhau_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

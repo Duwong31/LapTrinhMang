@@ -58,10 +58,10 @@
             linkLabel_QuenMatKhau.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             linkLabel_QuenMatKhau.Location = new Point(318, 397);
             linkLabel_QuenMatKhau.Name = "linkLabel_QuenMatKhau";
-            linkLabel_QuenMatKhau.Size = new Size(162, 25);
+            linkLabel_QuenMatKhau.Size = new Size(168, 25);
             linkLabel_QuenMatKhau.TabIndex = 1;
             linkLabel_QuenMatKhau.TabStop = true;
-            linkLabel_QuenMatKhau.Text = "Quên Mật Khẩu?";
+            linkLabel_QuenMatKhau.Text = "Forgot password?";
             linkLabel_QuenMatKhau.LinkClicked += linkLabel_QuenMatKhau_LinkClicked;
             // 
             // pictureBox2
@@ -113,7 +113,7 @@
             button_DangNhap.Name = "button_DangNhap";
             button_DangNhap.Size = new Size(215, 43);
             button_DangNhap.TabIndex = 7;
-            button_DangNhap.Text = "Đăng Nhập";
+            button_DangNhap.Text = "Sign in";
             button_DangNhap.UseVisualStyleBackColor = false;
             button_DangNhap.Click += button_DangNhap_Click;
             // 
@@ -125,7 +125,7 @@
             button_DangKy.Name = "button_DangKy";
             button_DangKy.Size = new Size(82, 43);
             button_DangKy.TabIndex = 8;
-            button_DangKy.Text = "Đăng Ký";
+            button_DangKy.Text = "Sign up";
             button_DangKy.UseVisualStyleBackColor = false;
             button_DangKy.Click += button_DangKy_Click;
             // 
@@ -144,7 +144,7 @@
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DangNhap";
-            Text = "Đăng nhập";
+            Text = "Sign In";
             Load += DangNhap_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
