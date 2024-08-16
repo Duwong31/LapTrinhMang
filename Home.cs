@@ -1,130 +1,300 @@
-﻿using System;  // Thư viện chứa các kiểu dữ liệu cơ bản và các phương thức hỗ trợ
-using System.Collections.Generic;  // Thư viện chứa các cấu trúc dữ liệu tổng quát (generic collections)
-using System.ComponentModel;  // Thư viện hỗ trợ lập trình với các thành phần (component) và điều khiển (control)
-using System.Data;  // Thư viện hỗ trợ làm việc với cơ sở dữ liệu
-using System.Drawing;  // Thư viện hỗ trợ xử lý đồ họa
-using System.Linq;  // Thư viện hỗ trợ các truy vấn dữ liệu với LINQ
-using System.Net;  // Thư viện hỗ trợ các chức năng mạng
-using System.Net.NetworkInformation;  // Thư viện hỗ trợ làm việc với thông tin mạng
-using System.Net.Sockets;  // Thư viện hỗ trợ làm việc với các socket
-using System.Text;  // Thư viện hỗ trợ xử lý văn bản
-using System.Threading.Tasks;  // Thư viện hỗ trợ lập trình bất đồng bộ (asynchronous programming)
-using System.Windows.Forms;  // Thư viện hỗ trợ tạo giao diện người dùng (UI) trên Windows
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ProjectNhom  // Khai báo không gian tên của chương trình
+namespace ProjectNhom
 {
-    public partial class Home : Form  // Khai báo lớp Home kế thừa từ Form (một loại cửa sổ trong Windows)
+    public partial class Home : Form
     {
-        private string IP = "127.0.0.1";  // Khởi tạo biến lưu địa chỉ IP của máy tính hiện tại
-        TcpListener tcpListener;  // Đối tượng lắng nghe các kết nối TCP đến
-        TcpClient tcpClient;  // Đối tượng đại diện cho một client TCP kết nối tới server
-        Socket socketCilent;  // Đối tượng socket dùng để giao tiếp qua mạng
-        private bool serverRunning = false;  // Biến kiểm tra trạng thái hoạt động của server
-
-        public Home()  // Hàm khởi tạo của lớp Home
+        public Home()
         {
-            InitializeComponent();  // Khởi tạo các thành phần của form
+            InitializeComponent();
+        }
+        private string IP = "127.0.0.1";
+        TcpListener tcpListener;
+        TcpClient tcpClient;
+        Socket socketCilent;
+    }
+
+
+    //For starting this program as a server
+    //StartServer
+    void startServer()
+    {
+        try
+        {
+            // Đặt cờ trạng thái server đang chạy
+            serverRunning = true;
+
+            // Khởi tạo TcpListener với địa chỉ IP và cổng 11000
+            listener = new TcpListener(IPAddress.Parse(IP), 11000);
+
+            // Bắt đầu lắng nghe kết nối đến
+            listener.Start();
+
+            // Tạo và bắt đầu một luồng mới để thực hiện các công việc của server
+            serverThread = new Thread(new ThreadStart(serverTasks)); 
+            serverThread.Start();
+
+            // Đợi cho đến khi luồng server thực sự bắt đầu
+            while (!serverThread.IsAlive) ;
         }
 
-        private void listPConline_SelectedIndexChanged(object sender, EventArgs e)  // Sự kiện khi danh sách máy tính online được chọn
+            // Hiển thị thông báo lỗi nếu có ngoại lệ
+        catch (Exception ex)
         {
-        }
-
-        private void button2_Click(object sender, EventArgs e)  // Sự kiện khi button2 được nhấn
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)  // Sự kiện khi label1 được nhấn
-        {
-        }
-
-        private void button7_Click(object sender, EventArgs e)  // Sự kiện khi button7 được nhấn
-        {
-        }
-
-        private void btn__Click(object sender, EventArgs e)  // Sự kiện khi một nút bấm không rõ được nhấn
-        {
-        }
-
-        private void Home_Load(object sender, EventArgs e)  // Sự kiện khi form Home được tải
-        {
-        }
-
-        void searchPC()  // Hàm tìm kiếm các máy tính trong mạng LAN
-        {
-            bool isNetworkUp = NetworkInterface.GetIsNetworkAvailable();  // Kiểm tra kết nối mạng có sẵn không
-            if (isNetworkUp)  // Nếu mạng hoạt động
-            {
-                var host = Dns.GetHostEntry(Dns.GetHostName());  // Lấy thông tin về host (máy tính hiện tại)
-                foreach (var ip in host.AddressList)  // Duyệt qua danh sách các địa chỉ IP của host
-                {
-                    if (ip.AddressFamily == AddressFamily.InterNetwork)  // Kiểm tra địa chỉ IP là IPv4
-                    {
-                        this.IP = ip.ToString();  // Lưu địa chỉ IP của máy tính hiện tại
-                    }
-                }
-                Invoke((MethodInvoker)delegate  // Cập nhật giao diện để hiển thị IP của máy tính
-                {
-                    infoLabel.Text = "This Computer: " + this.IP;
-                });
-
-                string[] ipRange = IP.Split('.');  // Chia địa chỉ IP thành các phần (octet)
-                for (int i = 100; i < 255; i++)  // Lặp qua dải IP từ 100 đến 254 để tìm kiếm các máy tính trong mạng
-                {
-                    Ping ping = new Ping();  // Tạo đối tượng Ping để gửi tín hiệu
-                    string testIP = ipRange[0] + '.' + ipRange[1] + '.' + ipRange[2] + '.' + i.ToString();  // Xây dựng địa chỉ IP cần kiểm tra
-                    if (testIP != this.IP)  // Nếu địa chỉ IP không phải của máy tính hiện tại
-                    {
-                        ping.PingCompleted += new PingCompletedEventHandler(pingCompletedEvent);  // Đăng ký sự kiện hoàn thành ping
-                        ping.SendAsync(testIP, 100, testIP);  // Gửi tín hiệu ping không đồng bộ tới địa chỉ IP
-                    }
-                }
-
-                Invoke((MethodInvoker)delegate  // Cập nhật giao diện để báo hiệu ứng dụng đang online
-                {
-                    notificationLabel.ForeColor = Color.Green;
-                    notificationLabel.Text = "Application is Online";
-                });
-
-                // Nếu server chưa chạy, thì bắt đầu chạy server
-                if (!serverRunning)
-                    startServer();
-            }
-            else  // Nếu mạng không hoạt động
-            {
-                Invoke((MethodInvoker)delegate  // Cập nhật giao diện để báo hiệu ứng dụng đang offline
-                {
-                    notificationLabel.ForeColor = Color.Red;
-                    notificationLabel.Text = "Application is Offline";
-                });
-                MessageBox.Show("Not connected to LAN");  // Hiển thị thông báo không kết nối được đến LAN
-            }
-        }
-
-        // Hàm xử lý sự kiện hoàn thành ping, để tìm máy tính online
-        void pingCompletedEvent(object sender, PingCompletedEventArgs e)
-        {
-            string ip = (string)e.UserState;  // Lấy địa chỉ IP từ trạng thái người dùng
-            if (e.Reply.Status == IPStatus.Success)  // Nếu ping thành công (có phản hồi từ máy tính đó)
-            {
-                string name;
-                try
-                {
-                    IPHostEntry hostEntry = Dns.GetHostEntry(ip);  // Lấy thông tin host từ địa chỉ IP
-                    name = hostEntry.HostName;  // Lưu tên host
-                }
-                catch (SocketException ex)  // Nếu có lỗi khi lấy thông tin host
-                {
-                    name = ex.Message;  // Lưu thông báo lỗi
-                }
-                Invoke((MethodInvoker)delegate  // Cập nhật giao diện để thêm máy tính online vào danh sách
-                {
-                    ListViewItem item = new ListViewItem();
-                    item.Text = ip;  // Đặt địa chỉ IP vào danh sách
-                    item.SubItems.Add(name);  // Đặt tên host vào danh sách
-                    onlinePCList.Items.Add(item);  // Thêm mục vào danh sách các máy tính online
-                });
-            }
+            MessageBox.Show(ex.Message);
         }
     }
+    //thread: waiting for client request and receiving data two times and resets.
+    //ServerTasks
+    void serverTasks()
+    {
+        try
+        {
+            while (true)
+            {
+                if (fileReceived == 1)  // Kiểm tra xem đã nhận được file chưa
+                {
+                    // Hiển thị hộp thoại hỏi người dùng có muốn lưu file không
+                    if (MessageBox.Show("Save File?", "File received", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    {
+                        // Nếu người dùng chọn "Không", xóa file đã lưu tạm
+                        File.Delete(savePath);
+                        fileReceived = 0;
+                    }
+                    else
+                    {
+                        // Nếu người dùng chọn "Có", đặt cờ fileReceived về 0 để tiếp tục nhận file mới
+                        fileReceived = 0;
+                    }
+                }
+
+                client = listener.AcceptTcpClient(); // Chấp nhận kết nối từ client
+
+                // Thực hiện hiển thị thông báo cho người dùng thông qua UI
+                Invoke((MethodInvoker)delegate
+                {
+                    notificationPanel.Visible = true;
+                    notificationTempLabel.Text = "File coming..." + "\n" + fileName + "\n" + "From: " + senderIP + " " + senderMachineName;
+                    fileNotificationLabel.Text = "File Coming from " + senderIP + " " + senderMachineName;
+                });
+                isConnected = true; // Đặt cờ trạng thái kết nối
+                NetworkStream stream = client.GetStream();  // Nhận dữ liệu từ stream
+                if (flag == 1 && isConnected)
+                {
+                    savePath = savePathLabel.Text + "\\" + fileName;
+                    using (var output = File.Create(savePath))
+                    {
+                        // read the file divided by 1KB
+                        var buffer = new byte[1024];
+                        int bytesRead;
+                        while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            output.Write(buffer, 0, bytesRead);
+                        }
+                        //MessageBox.Show("ok");
+                        flag = 0;
+                        client.Close();
+                        isConnected = false;
+                        fileName = "";
+                        Invoke((MethodInvoker)delegate
+                        {
+                            notificationTempLabel.Text = "";
+                            notificationPanel.Visible = false;
+                            fileNotificationLabel.Text = "";
+                        });
+                        fileReceived = 1;
+                    }
+                }
+                else if (flag == 0 && isConnected)
+                {
+                    Byte[] bytes = new Byte[256];
+                    String data = null;
+                    int i;
+                    // Loop to receive all the data sent by the client.
+                    while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+                    {
+                        data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+                    }
+                    string[] msg = data.Split('@');
+                    fileName = msg[0];
+                    senderIP = msg[1];
+                    senderMachineName = msg[2];
+                    client.Close();
+                    isConnected = false;
+                    flag = 1;
+                }
+            }
+        }
+        catch (Exception)
+        {
+            //MessageBox.Show(ex.Message);
+            flag = 0;
+            isConnected = false;
+            if (client != null)
+                client.Close();
+        }
+    }
+
+    //MainForm_FormClosing
+    private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+        if (serverRunning)
+        {
+            listener.Stop();
+            if (serverThread != null)
+            {
+                serverThread.Abort();
+                serverThread.Join();
+            }
+
+        }
+    }
+
+
+    //StopButton_Click
+    private void stopButton_Click(object sender, EventArgs e)
+    {
+        if (serverRunning)
+        {
+            serverRunning = false;
+            onlinePCList.Items.Clear();
+            if (listener != null)
+                listener.Stop();
+            if (serverThread != null)
+            {
+                serverThread.Abort();
+                serverThread.Join();
+            }
+
+            notificationLabel.ForeColor = Color.Red;
+            notificationLabel.Text = "Application is Offline";
+            infoLabel.Text = "";
+            fileNameLabel.Text = ".";
+        }
+    }
+                            // Kiểm tra trạng thái và kết nối
+                        if (flag == 1 && isConnected)
+                        {
+                            // Đường dẫn lưu file
+                            savePath = savePathLabel.Text + "\\" + fileName;
+
+                            // Lưu dữ liệu nhận được vào file
+                            using (var output = File.Create(savePath))
+                            {
+                                var buffer = new byte[1024];
+    int bytesRead;
+
+                                // Ghi dữ liệu vào file
+                                while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+                                {
+                                    output.Write(buffer, 0, bytesRead);
+                                }
+
+// Đặt lại cờ trạng thái và đóng kết nối
+flag = 0;
+client.Close();
+isConnected = false;
+fileName = "";
+
+// Cập nhật UI thông báo hoàn tất
+Invoke((MethodInvoker)delegate
+{
+    notificationTempLabel.Text = "";
+    notificationPanel.Visible = false;
+    fileNotificationLabel.Text = "";
+});
+
+// Đánh dấu file đã nhận
+fileReceived = 1;
+                            }
+                        }
+                        else if (flag == 0 && isConnected)
+{
+    // Đọc tên file và thông tin người gửi
+    Byte[] bytes = new Byte[256];
+    String data = null;
+    int i;
+
+    // Nhận dữ liệu từ client
+    while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+    {
+        data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
+    }
+
+    // Phân tích dữ liệu nhận được
+    string[] msg = data.Split('@');
+    fileName = msg[0];
+    senderIP = msg[1];
+    senderMachineName = msg[2];
+
+    // Đóng kết nối và đặt cờ trạng thái
+    client.Close();
+    isConnected = false;
+    flag = 1;
+}
+                    }
+                }
+                catch (Exception)
+                {
+    // Xử lý ngoại lệ và đặt lại cờ trạng thái
+    flag = 0;
+    isConnected = false;
+
+    // Đóng kết nối nếu có lỗi
+    if (client != null)
+        client.Close();
+}
+            }
+
+            // Xử lý khi Form đóng
+            private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
+{
+    if (serverRunning)
+    {
+        listener.Stop();
+
+        if (serverThread != null)
+        {
+            serverThread.Abort();
+            serverThread.Join();
+        }
+    }
+}
+
+// Xử lý khi nhấn nút Stop
+private void stopButton_Click(object sender, EventArgs e)
+{
+    if (serverRunning)
+    {
+        serverRunning = false;
+
+        // Xóa danh sách máy tính trực tuyến
+        onlinePCList.Items.Clear();
+
+        if (listener != null)
+            listener.Stop();
+
+        if (serverThread != null)
+        {
+            serverThread.Abort();
+            serverThread.Join();
+        }
+
+        // Cập nhật trạng thái server
+        notificationLabel.ForeColor = Color.Red;
+        notificationLabel.Text = "Ứng dụng đang Offline";
+        infoLabel.Text = "";
+        fileNameLabel.Text = ".";
+    }
+}
+        }
 }
