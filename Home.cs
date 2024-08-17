@@ -23,8 +23,6 @@ namespace ProjectNhom
         Socket socketCilent;
     }
 
-
-    //For starting this program as a server
     //StartServer
     void startServer()
     {
@@ -54,7 +52,6 @@ namespace ProjectNhom
         }
     }
 
-    //thread: waiting for client request and receiving data two times and resets.
     //ServerTasks
     void serverTasks()
     {
@@ -94,7 +91,6 @@ namespace ProjectNhom
                     savePath = savePathLabel.Text + "\\" + fileName;
                     using (var output = File.Create(savePath))
                     {
-                        // read the file divided by 1KB
                         var buffer = new byte[1024];
                         int bytesRead;
                         while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
