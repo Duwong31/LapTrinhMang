@@ -1,0 +1,8 @@
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\ProjectNhom.Home.resources
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.Properties.Resources.resources
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Nhom5_LapTrinhUngDungTruyenFileLon\Nhom5_LapTrinhUngDungTruyenFileLon\ProjectNhom\obj\Debug\net8.0-windows\LargeFileTransfer.csproj.CoreCompileInputs.cache
